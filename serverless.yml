@@ -1,0 +1,24 @@
+service: cleanup-cron
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: python3.7
+  region: ${opt:region, 'eu-central-1'}
+  environment: ${file(.env.yml):${self:provider.stage}}
+
+functions:
+  cleanupCron:
+    handler: handler.run
+    events:
+      - schedule: rate(1 day)
+    vpc:
+      securityGroupIds:
+        - sg-FIXME  # see fineprint section in readme
+      subnetIds:
+        - subnet-FIXME  # see fineprint section in readme
+    timeout: 20  # in seconds
+
+plugins:
+  - serverless-python-requirements
