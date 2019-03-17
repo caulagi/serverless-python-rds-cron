@@ -1,0 +1,7 @@
+*.py[cod]
+.venv
+__pycache__
+test.db
+node_modules
+.serverless
+.env.yml
