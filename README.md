@@ -13,9 +13,17 @@
 # serverless-python-rds-cron
 
 A serverless python example that periodically removes entries from RDS.
+In other words, the cron jobs are scheduled as lambda functions.
 
 For instance, you might want to delete users who have not verified their
 email after 30 days.
+
+**Features**
+
+- [x] Error reporting (sentry)
+- [x] Logging (via structlog, to stdout)
+- [ ] Monitoring (Can probably trust AWS but would be nice to add an additional
+check, if only to send slack/emails)
 
 ```bash
 $ python3.7 -m venv .venv
