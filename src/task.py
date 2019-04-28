@@ -1,5 +1,5 @@
 """
-Script to delete users who have not verified their email after 30 days.
+Script to mark users as inactive if they have not verified their email after 30 days.
 """
 import datetime
 import os
