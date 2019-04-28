@@ -28,21 +28,18 @@ check, if only to send slack/emails)
 ```bash
 $ python3.7 -m venv .venv
 $ source ./venv/bin/activate
-$ pip install -r requirements.txt # (or requirements-dev.txt)
+$ pip install -r requirements-dev.txt
 
 $ export DATABASE_URL='mysql+pymysql://apa:apa@localhost/customer?charset=utf8mb4'
-$ python cleanup.py
+$ python src/cleanup.py
 
-# Tests (if you installed dev requirements)
 $ python -m pytest -v
 ```
 
 ## Deploying
 
 This script is meant to be deployed as a [Lambda Cron](https://docs.aws.amazon.com/lambda/latest/dg/tutorial-scheduled-events-schedule-expressions.html)
-using [serverless](https://serverless.com/)
-
-Install [yarn](https://yarnpkg.com/lang/en/)
+using [serverless](https://serverless.com/).  You also need [yarn](https://yarnpkg.com/lang/en/)
 
 ```bash
 $ yarn global add serverless

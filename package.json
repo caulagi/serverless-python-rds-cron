@@ -4,7 +4,7 @@
   "description": "Example use of scheduled cron using Lambda and RDS",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf venv node_module __pycache__ .pytest_cache test.db"
+    "clean": "rimraf __pycache__ .pytest_cache test.db"
   },
   "keywords": [
     "aws",
