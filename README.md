@@ -12,7 +12,7 @@
 
 # serverless-python-rds-cron
 
-![Build status](https://github.com/caulagi/serverless-python-rds-cron/workflows/Test%20project/badge.svg?branch=master)
+![Build status](https://github.com/caulagi/serverless-python-rds-cron/workflows/Project%20build/badge.svg?branch=master)
 
 A serverless python example that periodically updates entries in RDS.
 For instance, you might want to mark users as inactive if they have not
