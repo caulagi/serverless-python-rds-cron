@@ -5,3 +5,4 @@ test.db
 node_modules
 .serverless
 .env.yml
+.vscode
